@@ -21,33 +21,22 @@
     <nav class="navbar navbar-default" role="navigation"> 
       <!-- Brand and toggle get grouped for better mobile display --> 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="navbar-header"> <a href="#" onClick="javascript.void()" class="submenu">Menus</a> </div>
+      <div class="navbar-header"> 
+	    <a href="#" onClick="javascript:void(0);" class="submenu">Menus</a> 
+		<a class="navbar-brand" href="#"><img src="images/logo.png" style="height:100%;position: absolute;margin-left:25px" /></a>
+	  </div>
       <div class="menuBar">
         <ul class="menu">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li class="dropdown"><a href="#">Pages</a>
-            <ul>
-              <li><a href="index_fixed.html">Home / Fixed</a></li>
-              <li><a href="index_with_blog.html">Home + Blog</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="typography.html">Typography</a></li>
-              <li><a href="shortcodes.html">Shortcodes</a></li>
-              <li><a href="store.html">Web Store</a></li>
-              <li><a href="blog.html">Blog & News</a></li>
-              <li><a href="tables.html">Tables</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li><a href="left_sidebar.html">left sidebar</a></li>
-          <li><a href="right_sidebar.html">right sidebar</a></li>
-          <li><a href="full_width.html">full page</a></li>
-          <li><a href="contact.html">contact us</a></li>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#our-services">Services</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
     </nav>
     <div class="navbar-header with__logo">
-      <h1 class="navbar-brand"><a href="index.html">LEVENT</a></h1>
+      <h1 class="navbar-brand"><a href="index.html">RENOBOX</a></h1>
     </div>
   </div>
 </header>
@@ -57,8 +46,8 @@
       <div class="item"> <img data-src="images/slider/image_1920x1000.jpg" alt="first slide" src="images/slider/image_1920x1000.jpg">
         <div class="container">
           <div class="carousel-caption">
-            <h1>scelerisque <span>porta</span> dignissim <span>amet </span> tellus aliquet</h1>
-            <p>consectetur velit, nec rhoncus quam urna et purus. Aliquam urna augue, semper id.</p>
+            <h1>Provide <span>Renovation</span> Services</h1>
+            <p>Reno Box started off with the residential properties and projects and gradually step into the commercial sector with the consistency of our effort and word of mouth</p>
             <p><a class="btn btn-default btn-lg" href="#" role="button">get started</a><a class="btn btn-default btn-lg" href="#" role="button">read more</a></p>
           </div>
         </div>
@@ -66,8 +55,8 @@
       <div class="item"> <img data-src="images/slider/image_1920x1000.jpg" alt="second slide" src="images/slider/image_1920x1000.jpg">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Vivamus <span>Maecenas</span> orci <span>risus</span> fermentum sed</h1>
-            <p>Nisl consectetur velit, nec rhoncus quam urna et purus. Aliquam urna augue.</p>
+            <h1>more than <span>30 years </span>of experience in the renovation industry</h1>
+            <p>We believe in providing excellent and quality workmanship and services to our clients and renovations solution for your workplace and homes. </p>
             <p><a class="btn btn-default btn-lg" href="#" role="button">get started</a><a class="btn btn-default btn-lg" href="#" role="button">read more</a></p>
           </div>
         </div>
@@ -75,8 +64,8 @@
       <div class="item active"> <img data-src="images/slider/image_1920x1000.jpg" alt="third slide" src="images/slider/image_1920x1000.jpg">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Phasellus <span>ultrices</span> eleifend <span>commodo</span> gravida</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+            <h1>the manufacturer of <span>furniture</span> and <span>fixtures</span></h1>
+            <p>Reno Box are mainly dealing with F&B outlets such as Starbucks, Just Acia, KFC/Pizza Hut and restaurants Outlets Island wide.</p>
             <p><a class="btn btn-default btn-lg" href="#" role="button">get started</a><a class="btn btn-default btn-lg" href="#" role="button">read more</a></p>
           </div>
         </div>
@@ -86,7 +75,7 @@
 </section>
 <!--end of slider section-->
 <section class="main__middle__container homepage">
-  <div class="row text-center headings no-margin nothing">
+  <div id="mission" class="row text-center headings no-margin nothing">
     <div class="container">
       <h1 class="page_title">Suspendisse vulputate sapien sit amet felis</h1>
       <div class="seper"></div>
@@ -94,7 +83,7 @@
       <p><a class="btn btn-primary btn-lg" href="#" role="button">read more</a></p>
     </div>
   </div>
-  <div class="row three__blocks no_padding no-margin text-center">
+  <div id="our-services" class="row three__blocks no_padding no-margin text-center">
     <div class="container"> <img src="images/icons/services.png" alt="icon__image" class="text-center">
       <h2 class="page__title text-center"><span>OUR SERVICES</span></h2>
       <div class="seper text-center"></div>
@@ -182,7 +171,7 @@
   </div>
 </section>
 <footer>
-  <div class="container">
+  <div id="contact-us" class="container">
     <div class="row">
       <div class="col-md-3">
         <h3>About</h3>
@@ -236,7 +225,7 @@
 <script type="text/javascript">
 
 $('.carousel').carousel({
-  interval: 3500, // in milliseconds
+  interval: 8000, // in milliseconds
   pause: 'none' // set to 'true' to pause slider on mouse hover
 })
 
