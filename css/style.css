@@ -1085,6 +1085,12 @@ h1.page_title {
 header.with-boxed {
 	height: auto;
 }
+.navbar-brand img{
+	display:none;
+}
+.menuBar li{
+	width:100%;
+}
 }
 @media(max-width:767px) {
 .container>.navbar-header, .container>.navbar-collapse {
@@ -1715,4 +1721,12 @@ header {
 	margin: 0;
 	padding: 0;
 	width: 100%
+}
+#mission li {
+	font-size:20px;
+	text-align:left;
+}
+#about-us p{
+	font-size:20px;
+	text-align:left;
 }
