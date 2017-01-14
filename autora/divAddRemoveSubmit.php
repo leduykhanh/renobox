@@ -435,7 +435,11 @@ alert(attrName);
 </script>
 
 
+<?php
+    include_once("config.php");
+    $raMembers =(mysqli_query($con,"SELECT * FROM ramember"));
 
+  ?>
 <div class="container" style="border:2px solid black;">
 
 <form method="post" action="riskmange.php" class="inlineForm" enctype="multipart/form-data" >
@@ -529,7 +533,12 @@ alert(attrName);
                     <div class="col-sm-6">
                         <label class="col-sm-4">RA Members:</label>
                         <label class="col-sm-8">
-                        <input  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder="">
+                        <select  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder="">
+                          <?php foreach ($raMembers as $raMember) {
+
+                            echo "<option value=".$raMember["id"].">".$raMember["name"]."</option>";
+                          }?>
+                        </select>
                         </label>
                     </div>
                     <button class="col-sm-1 btn btn-danger deleteMember">Remove</button>
@@ -746,7 +755,11 @@ alert(attrName);
                                     <div class="col-sm-6">
 
                                         <label class="col-sm-6">Action Officer:</label>
-                                        <input type="text" name="actionOfficer[]"   class="col-sm-6" />
+                                        <select name="actionOfficer[]" class="col-sm-6" type="text" id="inputSaving" placeholder="">
+                                          <?php foreach ($raMembers as $raMember) {
+                                            echo "<option value=".$raMember["id"].">".$raMember["name"]."</option>";
+                                          }?>
+                                        </select>
                                     </div>
                                      <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                                 </div>
@@ -756,7 +769,7 @@ alert(attrName);
                                       <div class="col-sm-6">
 
                                           <label class="col-sm-6">Action Officer:</label>
-                                            <input type="text" name="actionOfficer[]"   class="col-sm-6" >
+                                          <input type="text" name="actionOfficer[]"   class="col-sm-6" >
                                       </div>
                                        <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                                   </div>
@@ -973,7 +986,11 @@ alert(attrName);
                                     <div class="col-sm-6">
 
                                         <label class="col-sm-6">Action Officer:</label>
-                                        <input type="text" name="actionOfficer[]"   class="col-sm-6" />
+                                        <select name="actionOfficer[]" class="col-sm-6" type="text" id="inputSaving" placeholder="">
+                                          <?php foreach ($raMembers as $raMember) {
+                                            echo "<option value=".$raMember["id"].">".$raMember["name"]."</option>";
+                                          }?>
+                                        </select>
                                     </div>
                                     <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                                 </div>
