@@ -58,6 +58,7 @@ $harzard = array(
 	"e_m_m_p_p" => "Exposed mechanical moving part/Pinch point",
 	"c_h_s" => "Chemical hazards(Silica)",
 	"i_c_w" => "Incompatible work",
+	"h_p_v" => "High pressure vessel",
 	"other" => "Other"
 );
 $injury =array(
@@ -570,6 +571,15 @@ $existing_risk_control=array(
 		"1" =>	"Hot work shall not be carried out near flammable work area or when flammable substance is being used nearby", 
 		"2" =>	"Ventilation blower shall be placed near generators or cement mixing area", 
 		"3" =>	"Planning for the work activities before start of work", 
+		),
+	"h_p_v" => array(
+		"0" =>	"Compressor above 5 bar shall be inspected by AE and register with MOM", 
+		"1" =>	"Certificate to be displayed near compressor to checking before use", 
+		"2" =>	"Whip arrestor shall be installed with hoses", 
+		"3" =>	"Monthly inspection of compressor and hose", 
+		"4" =>	"Training shall be provided to personnel using the compressor", 
+		"5" =>	"Display warning signs to warn others of the hazards", 
+		"6" =>	"Ear muff and ear plug shall be used", 
 		),
 	"other" => array()
 );

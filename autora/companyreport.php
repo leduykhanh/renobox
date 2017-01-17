@@ -207,19 +207,20 @@ td p{
             <table id="risk_register_2" style="width:100%;">
             <?php
             $signee = mysqli_fetch_assoc($resultlSigning);
-            $sqlRAMember = "SELECT * FROM  `ramember` WHERE  `riskid` = $_GET[riskid]";
+            $sqlRAMember = "SELECT * FROM  `ramember` WHERE  `id` in (SELECT ramemberId as id from risk_ramemeber WHERE `riskId` = $_GET[riskid])";
             $resultlRAMember = mysqli_query($con, $sqlRAMember);
             $RAMemberRowCount= mysqli_num_rows($resultlRAMember);
             ?>
             <tr >
                     <td rowspan="1" colspan="1" style="width:15%;vertical-align: middle;">Department:</td>
                     <td rowspan="1" colspan="1" style="width:20%;vertical-align: middle;">Reno Box Pte Ltd</td>
-                    <td rowspan="1" colspan="1" style="width:25%;vertical-align: middle;">RA Leader :<?php echo $valueAllUser['name'];?></td>
+                    <td rowspan="1" colspan="1" style="width:25%;vertical-align: middle;">RA Leader :<?php echo $valueAllUser['name'];
+                    echo '<img width="40" src="staff/'.$valueAllUser["signature"].'"/>';?></td>
                     <td rowspan="3" colspan="1" style="width:15%;vertical-align: middle;">Approved by:Signature:</td>
                     <td rowspan="3" colspan="1" style="width:15%;vertical-align: middle;">
                     <?php if($risk['status'] ==2)
                         {
-							//echo '<img width="120" src="staff/'.$signee["signature"].'"/>';
+							echo '<img width="120" src="staff/'.$signee["signature"].'"/>';
 						}
 						?>
                      </td>
@@ -231,6 +232,7 @@ td p{
                      <td rowspan="1" colspan="1" style="width:20%"><?php echo wordwrap ($risk['process'], 15, "\n", 1);?></td>
                      <td rowspan="1" colspan="1" style="width:25%">
                        RA Member 1: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];
+                       echo $raMember['name']?"<img width='80' src='staff/".$raMember['signature']."'>":"";
                        ?>
                      </td>
                 </tr>
@@ -239,13 +241,15 @@ td p{
                      <td rowspan="1" colspan="1" style="width:20%" ><?php echo $risk['location'];?></td>
                      <td rowspan="1" colspan="1" style="width:25%">
                        RA Member 2: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];
+                       echo $raMember['name']?"<img width='80' src='staff/".$raMember['signature']."'>":"";
                        ?></td>
                 </tr>
 
                 <tr>
                      <td rowspan="1" colspan="1" style="width:15%">Original Assessment Date:</td>
                      <td rowspan="1" colspan="1" style="width:20%"><?php echo $date = date('d-m-Y', strtotime($risk['createdDate']));?></td>
-                     <td rowspan="1" colspan="1" style="width:25%">RA Member 3:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];?></td>
+                     <td rowspan="1" colspan="1" style="width:25%">RA Member 3:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];
+                     echo $raMember['name']?"<img width='80' src='staff/".$raMember['signature']."'>":"";?></td>
                      <td rowspan="1" colspan="1" style="width:15%">Name:</td>
                      <td rowspan="1" colspan="1" style="width:15%"><?php if($risk['status'] ==2){ echo $signee['name'];}?></td>
                 </tr>
@@ -257,7 +261,8 @@ td p{
 							echo $date = date('d-m-Y', strtotime($risk['approveDate']));
 						}
 						?></td>
-                     <td rowspan="1" colspan="1" style="width:25%">RA Member 4:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];?></td>
+                     <td rowspan="1" colspan="1" style="width:25%">RA Member 4:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];
+                     echo $raMember['name']?"<img width='80' src='staff/".$raMember['signature']."'>":"";?></td>
                      <td rowspan="1" colspan="1" style="width:15%">Designation:</td>
                      <td rowspan="1" colspan="1" style="width:15%">
 

@@ -5,7 +5,7 @@ Custom Styles. Bootstrap Styles are default'
 }
 body {
 	font-family: "Open Sans", Calibri, sans-serif;
-	color: #a6a8a8;
+	color: #000;
 	background: #fff;
 	font-size: 14px;
 	overflow-x: hidden !important;
@@ -692,7 +692,7 @@ img.full-width {
 	margin: 0;
 	z-index: 9;
 	padding: 45px 0 85px 0;
-	color: #999;
+	color: #000;
 }
 .grey-info-block>.container {
 	position: relative;
@@ -1729,4 +1729,7 @@ header {
 #about-us p{
 	font-size:20px;
 	text-align:left;
+}
+.container li {
+	background: #fafafa;
 }

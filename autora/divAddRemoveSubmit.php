@@ -534,6 +534,7 @@ alert(attrName);
                         <label class="col-sm-4">RA Members:</label>
                         <label class="col-sm-8">
                         <select  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder="">
+                          <option value="">-- Select RA members --</option>
                           <?php foreach ($raMembers as $raMember) {
 
                             echo "<option value=".$raMember["id"].">".$raMember["name"]."</option>";

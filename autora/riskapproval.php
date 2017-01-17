@@ -123,7 +123,7 @@ session_start();
       //so we use the MD5 algorithm to generate a random hash
       $random_hash = md5(time());
       //define the headers we want passed. Note that they are separated with \r\n
-      $headers = "From: suresh@cak-fg.com.sg\r\nReply-To: suresh@cak-fg.com.sg";
+      $headers = "From: william@renobox.com.sg\r\nReply-To: william@renobox.com.sg";
       //add boundary string and mime type specification
       $headers .= "\r\nContent-Type: multipart/alternative; boundary=\"PHP-alt-".$random_hash."\"";
       //define the body of the message.
@@ -143,7 +143,7 @@ session_start();
 
       Please click on the link below to approve the Risk assessment.
 
-      Site link : http://jangkoo.com/projects/cak/
+      Site link : http://renobox.com.sg/autora/
 
       User name : <?php echo $staffName['email'];?>
 

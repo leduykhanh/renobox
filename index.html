@@ -44,7 +44,7 @@
 <section class="slider">
   <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="item active"> <img data-src="images/IMG_3121.JPG" alt="first slide" src="images/IMG_3121.JPG">
+      <div class="item active"> <img data-src="images/FullSizeRender.jpg" alt="first slide" src="images/FullSizeRender.jpg">
         <div class="container">
           <div class="carousel-caption">
             <h1>Provide <span>Renovation</span> Services</h1>
@@ -67,7 +67,7 @@
 </section>
 <!--end of slider section-->
 <section class="main__middle__container homepage">
-  <div id="mission" class="row text-center three__blocks no-margin nothing">
+  <div id="mission" class="row text-center three__blocks no-margin nothing grey-info-block ">
     <div class="container">
       <img src="images/icons/blog.png" alt="icon__image" class="text-center">
       <h2 class="page__title text-center"><span>OUR MISSION</span></h2>
@@ -95,7 +95,6 @@
 			</li>
 		  </ul>
 		</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">read more</a></p>
     </div>
   </div>
   <div id="our-services" class="row three__blocks no_padding no-margin text-center">
@@ -108,36 +107,39 @@
         <p class="small-paragraph">Fitness First Singapore Group</p>
         <div class="seper"></div>
         <p>FF Fusionopolis  </p>
-        <p><button class="btn btn-info btn-md" data-toggle="collapse" data-target="#rp" aria-expanded="false" aria-controls="rp">Learn More </button>
+        
         <div class="collapse" id="rp">
           <div class="card card-block">
-            Resort World Sentosa, One George
+            FF Paragon, FF One George Street, FF MBFC, FF One Raffles Quay.
           </div>
         </div>
+        <p><button class="btn btn-info btn-md" data-toggle="collapse" data-target="#rp" aria-expanded="false" aria-controls="rp">View More </button></p>
       </div>
       <div class="col-md-4 middle"> <img src="images/content__images/fab.jpg" alt="image" class="img-responsive img-rounded">
         <h3><a href="#">F&amp;B Outlets</a></h3>
         <p class="small-paragraph">Restaurant Cum Café </p>
         <div class="seper"></div>
         <p>Jamaica Blue @ Star Vista, Asia Sq Tower II - Makan Pandang</p>
-        <p><button class="btn btn-info btn-md" data-toggle="collapse" data-target="#fb" aria-expanded="false" aria-controls="fb">Learn More </button>
+        
         <div class="collapse" id="fb">
           <div class="card card-block">
-            Ocean Financial Centre, One George
+            Club Me @ iFly Singapore - Sentosa, Ochre Restaurant, Tully's Coffee, Sumo & Salta Restaurant, Dean & Deluca, Coldstone & Quiznos, Black Angus Steak House @ Hillview,  ifly Building Singapore ...
           </div>
         </div>
+        <p><button class="btn btn-info btn-md" data-toggle="collapse" data-target="#fb" aria-expanded="false" aria-controls="fb">View More </button></p>
       </div>
       <div class="col-md-4"> <img src="images/content__images/restaurants.jpg" alt="image" class="img-responsive img-rounded">
         <h3><a href="#">Commercial projects</a></h3>
         <p class="small-paragraph">Starbucks Coffee @</p>
         <div class="seper"></div>
         <p>One George, Woodland Exchange,</p>
-        <p><button class="btn btn-info btn-md" data-toggle="collapse" data-target="#cp" aria-expanded="false" aria-controls="cp">Learn More </button>
+        
         <div class="collapse" id="cp">
           <div class="card card-block">
-            One George,Resort World Sentosa
+            JEM, Resort World Sentosa, Hougang Mall, J Cube, Bishan Community Club, Raffles Hospital, Asia Sq Tower II, NUHMC, Ocean Financial Centre, The Metropolis,Bedok Mall, Westgate ...     
           </div>
         </div>
+        <p><button class="btn btn-info btn-md" data-toggle="collapse" data-target="#cp" aria-expanded="false" aria-controls="cp">View More </button></p>
       </div>
     </div>
   </div>
@@ -344,6 +346,13 @@ $( "ul li.dropdown ul" ).slideToggle( "normal", function() {
 });
 $('ul li.dropdown').toggleClass('current');
 });
+$( "li>a" ).click(function() {
+    event.preventDefault();
+    // $(".navbar-brand").hide(500);
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 105
+    }, 500);
+  });
 </script>
 </body>
 </html>
