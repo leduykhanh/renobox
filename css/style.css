@@ -1733,3 +1733,6 @@ header {
 .container li {
 	background: #fafafa;
 }
+.caption-wraper{
+	background-color: rgba(0,0,0,0.5);
+}
