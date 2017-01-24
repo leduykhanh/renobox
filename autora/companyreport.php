@@ -170,7 +170,7 @@ td p{
 
                      <td colspan="2" ><b></b></td>
                      <td rowspan="1" ><b>Total:<?php echo $totalWorkActivity;?> Pages</b></td>
-                     <td rowspan="1" ><b>Reference Number P-0<?php echo $risk['id']; echo $risk['id'];?></b></td>
+                     <td rowspan="1" ><b>Reference Number P-0<?php echo $risk['id'];?></b></td>
 
                 </tr>
     </table>
@@ -224,7 +224,7 @@ td p{
 						}
 						?>
                      </td>
-                    <td rowspan="6" colspan="1" style="width:10%;vertical-align: middle;"><img width='100' src='staff/stamp.png' /><br />Reference Number<h1>P-0<?php echo $risk['id']; echo $risk['id'];?></h1></td>
+                    <td rowspan="6" colspan="1" style="width:10%;vertical-align: middle;"><img width='100' src='staff/stamp.png' /><br />Reference Number<h1>P-0<?php echo $risk['id'];?></h1></td>
 
                 </tr>
                  <tr>
