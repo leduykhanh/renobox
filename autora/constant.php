@@ -13,7 +13,58 @@ $raSinatures = array(
 	"name1" => "chan.png",
 	"name2" => "fat.png",
 );
+/* 
+// GENERAL
+Working at height (using ladder)
+Working at height (using scaffold)
+Working at height (more than 3m)
+Physical hazards (sharp objects)
+Chemical hazards (general)
+Falling objects
+Electrical hazard
+Ergonomic hazard
+Slip,trip fall hazard
+Confined space
+Fire Hazard
+Gas Hazard
+Bad Weather (lightning)
+Bad weather (Hot weather)
+Bad weather (haze)
+loading and unloading with traffic
+Reckless driving
+Heavy load by manual handling
+Material on uneven ground (unstable)
+Working at height (using boomlift)
+Working at height (using sisscor lift)
+Poor planning for lfting operation
+Flying particles
+High pressure vessel (compressor)
+// RENOBOX
+Noise
+Dust
+Misuse of tools 
+Damaged tools
+Poor House keeping
+Exposed cables/Damaged electrical parts
+Inexperienced workers
+Improper manual handling/Bulky material
+Strenuous activity
+Exposed mechanical moving part/Pinch point
+Chemical hazards(Silica)
+Chemical hazards(Glue)
+Incompatible work
+//OFFICE
+Heavy load
+Bulky Loads
+Unstable Loads
+Awkward Postures
+Static Postures
+Uncomfortable workstation
+ageing workforce
+*/
 $harzard = array(
+	//General
+	"w_a_h_l" => "Working at height (using ladder)",
 	"w_h_l_3m"	=> "Working at height (less than 3m)",
 	"w_h_m_3m"	=> "Working at height (more than 3m)",
 	"p_h_s_o"	=> "Physical hazards (sharp objects)",
@@ -37,6 +88,15 @@ $harzard = array(
 	"w_a_h_sf" => "Working at height (using scaffold)",
 	"p_p_f_l_o" => "Poor planning for lfting operation",
 	"f_p" => "Flying particles",
+	//Office
+	"h_l" => "Heavy load",
+	"b_l" => "Bulky Loads",
+	"u_l" => "Unstable Loads",
+	"a_p" => "Awkward Postures",
+	"s_p" => "Static Postures",
+	"u_w" => "Uncomfortable workstation",
+	"a_w" => "ageing workforce",
+	/*
 	"w_a_h_t" => "Working around heavy traffic",
 	"w_i_t_t" => "Working in train tunnel(electrical hazards)",
 	"u_s_c_m_v" => "Unsafe site condition ( moving vehicles)",
@@ -46,6 +106,8 @@ $harzard = array(
 	"u_s_c_r_a_i" => "Unsafe site condition (Reptiles and Insects)",
 	"u_s_c_w_n_d_w" => "Unsafe site condition (working near deep water)",
 	"n_w_p_v" => "Night work (poor visibility)",
+	*/
+	//Renobox
 	"noise" => "Noise",
 	"dust" => "Dust",
 	"m_o_t" => "Misuse of tools ",
@@ -88,6 +150,18 @@ $severity = array(
 				"10"=>"2"
 );
 $existing_risk_control=array(
+	"w_a_h_l" => array(
+		"0" => "Proper maintenance of the PPE to be carried out monthly",
+		"1" => "Briefing to be conducted before start of work",
+		"2" => "Buddy system to support ladder",
+		"3" => "Proper demarcation to be in placed",
+		"4" => "Opening to be fully covered",
+		"5" => "Warning signs to be provided",
+		"6" => "Inspection of ladder and PPE", 
+		"7" => "Ladder shall be inspected before use",
+		"8" => "No using the last 3 rungs of the ladder. Cover the last 3 rungs of the ladder to prevent usage.",
+		"9" => "Rubber stopper installed on ladder / Self-supporting ladders that are defect-free and skid-free must be used.", 
+		),
 	"w_h_l_3m" => array(
 				"0" => "Donned safety harness with 100% tie off",
 				"1" => "Use of portable access platform",
@@ -580,6 +654,59 @@ $existing_risk_control=array(
 		"4" =>	"Training shall be provided to personnel using the compressor", 
 		"5" =>	"Display warning signs to warn others of the hazards", 
 		"6" =>	"Ear muff and ear plug shall be used", 
+		),
+	"h_l" => array(
+		"0" =>	"Store heavier objects on shelves at waist level if these objects are frequently handled.", 
+		"1" =>	"Use mechanical aids and tools to lift or move heavy objects", 
+		"2" =>	"Get the help of another person to lift or move heavy objects where appropriate.", 
+		"3" =>	"Apply correct lifting techniques", 
+		"4" =>	"Where feasible, slide, roll or push heavy objects instead of carrying them.", 
+		"5" =>	"Wear appropriate footwear to prevent slips, trips and falls", 
+		),
+	"b_l" => array(
+		"0" =>	"Pack goods in smaller boxes to reduce the weight and size of each box", 
+		"1" =>	"Ensure that the travel path for moving objects is kept dry and free from obstacles", 
+		"2" =>	"When a colleague is assisting with the task, ensure that both lift the load at the same time (to achieve even distribution of load)", 
+		"3" =>	"Use mechanical aids or tools where appropriate, for example, a trolley", 
+		"4" =>	"Avoid slopes, stairs or other obstacles.", 
+		),
+	"u_l" => array(
+		"0" =>	"Fill containers or drums for holding liquids or powders to the brim. This will prevent the weight of the load from shifting considerably during transportation and reduce instability", 
+		"1" =>	"Use slings or other aids to maintain good control of the load.", 
+		"2" =>	"Possess knowledge of the proper handling techniques and use appropriate equipment for handling persons ", 
+		),
+	"a_p" => array(
+		"0" =>	"Have adjustable workstations/ equipment so that items and equipment can be rearranged to reduce the need to stretch or reach for things.",
+		"1" =>	"Have work surfaces with adjustable heights (scissor lift tables) to allow the feet to rest comfortably on the floor or footrest",
+		"2" =>	"Place all required work items and equipment in front of the employee (e.g., cashier or assembly operator) to eliminate the need to turn to the side.",
+		"3" =>	"Use mechanical aids to improve posture, for example, headphones for telephone operators.",
+		"4" =>	"Store bulky and/ or heavy items on shelves near waist level for easier retrieval because this will reduce the need to stretch above the elbow or over the head",
+		),
+	"s_p" => array(
+		"0" =>	"Provide footrest bars for employees who sit when they work so that they can alter their posture when necessary, such as by raising one foot.",
+		"1" =>	"Provide anti-fatigue mats or sit or stand stools for employees to stand or sit on.",
+		"2" =>	"Allow employees to sit and rest at regular intervals",
+		"3" =>	"Encourage employees to change position, stand up, stretch or walk around whenever they feel tired",
+		),
+	"u_w" => array(
+		"0" =>	"Adjust the height of the working surface to suit the needs of the employee",
+		"1" =>	"Provide sufficient space for the knees and legroom under the worktable and a footrest for shorter employees where necessary", 
+		"2" =>	"Ensure that the work surface is not reflective and is large enough to accommodate all equipment and stationery comfortably.",
+		"3" =>	"Arrange equipment on the workstation to minimise awkward overstretching by placing frequently used items in the accessible primary reach zone and less frequently used items in the secondary reach zone.", 
+		"4" =>	"Use a chair which is stable and adjustable, with armrests and backrest.",
+		"5" =>	"Place the monitor directly in front of the employee, with additional working space at the sides",
+		"6" =>	"Ensure that wrists are kept straight while using the keyboard and mouse, with some space provided between the table edge and keyboard for wrist support.",
+		"7" =>	"Avoid working or sitting for long periods of time. Employees should be encouraged to change posture, stretch and stand or walk around whenever they feel tired.",
+		),
+	"a_w" => array(
+		"0" =>	"Tasks should be ergonomically designed (matching the nature of the job with the design of equipment, machinery and tools) to ensure that tasks are within the physical and mental capacities of the workforce.",
+		"1" =>	"reduce the weight of the load or using mechanical aids",
+		"2" =>	" higher illumination levels (i.e., upper values in the range of recommended illumination levels) could be provided for individuals aged over 55 years.",
+		"3" =>	"magnifying glasses, larger screens, high contrast displays and larger font sizes could be used at workstations.",
+		"4" =>	"The work area should allow more space for older employees to manoeuvre when performing their tasks",
+		"5" =>	"Tasks should be designed such that any procedures and/ or objectives are clear. Where possible, older employees should not be assigned complex tasks.",
+		"6" =>	"Memory aids such as notices, signs or visible flowcharts should be used to reduce memory strain.", 
+		"7" =>	"Self-paced work that can accommodate an older employee’s decreased physical ability could substitute line or team-based work",
 		),
 	"other" => array()
 );
