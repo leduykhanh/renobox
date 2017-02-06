@@ -72,7 +72,7 @@ $harzard = array(
 	"f_o"		=> "Falling objects",
 	"e_h"		=> "Electrical hazard",
 	"e_r_h"		=> "Ergonomic hazards",
-	"s_t_f_h"	=> "Slip,trip fall",
+	"s_t_f_h"	=> "Slip,trip fall hazard",
 	"c_s_h" 	=> "Confined space",
 	"f_h"		=> "Fire Hazard",
 	"g_h"		=> "Gas Hazard",
@@ -120,7 +120,7 @@ $harzard = array(
 	"e_m_m_p_p" => "Exposed mechanical moving part/Pinch point",
 	"c_h_s" => "Chemical hazards(Silica)",
 	"i_c_w" => "Incompatible work",
-	"h_p_v" => "High pressure vessel",
+	"h_p_v" => "High pressure vessel (compressor)",
 	"other" => "Other"
 );
 $injury =array(
