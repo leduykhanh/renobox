@@ -82,44 +82,6 @@
                             </select>
                           </div>
 
-                          <div class="row">
-                            <label class="col-sm-6">Action Date:</label>
-                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionDate[]">
-                               <?php for ($i=1; $i < 32; $i++)
-                              {
-                                # code...
-                                ?>
-                                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                              }
-                             ?>
-                            </select>
-
-                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionMonth[]">
-                              <?php for ($i=1; $i < 13; $i++)
-                              {
-                                # code...
-                                ?>
-                                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                              }
-                             ?>
-                            </select>
-
-                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionYear[]">
-                              <?php for ($i=2016; $i < 2025; $i++)
-                              {
-                                # code...
-                                ?>
-                                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                              }
-                             ?>
-
-                            </select>
-
-                          </div>
-
                         </div>
 
 
@@ -189,6 +151,44 @@
                         <div class="col-sm-12 form-row">
                           <button class="col-sm-2 btn btn-primary addActionMember" id="add_new_member">+Action Officer</button>
                           <button class="col-sm-2 col-sm-offset-1 btn btn-primary addOtherActionMember" id="add_new_other_member">Add Others</button>
+                          <div class="col-sm-1"> </div>
+                          <div class="form-row col-sm-6">
+                            <label class="col-sm-6">Action Date:</label>
+                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionDate[]">
+                               <?php for ($i=1; $i < 32; $i++)
+                              {
+                                # code...
+                                ?>
+                                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php
+                              }
+                             ?>
+                            </select>
+
+                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionMonth[]">
+                              <?php for ($i=1; $i < 13; $i++)
+                              {
+                                # code...
+                                ?>
+                                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php
+                              }
+                             ?>
+                            </select>
+
+                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionYear[]">
+                              <?php for ($i=2016; $i < 2025; $i++)
+                              {
+                                # code...
+                                ?>
+                                  <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php
+                              }
+                             ?>
+
+                            </select>
+
+                          </div>
                           <input type="hidden" name="hazardsActionOfficerCount[]" id="hazardsActionOfficerCount" value="1" />
                         </div>
 

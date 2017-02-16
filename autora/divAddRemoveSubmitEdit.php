@@ -442,84 +442,6 @@ $cntval = 1;
 
                           </div>
 
-                          <div class="row">
-                            <label class="col-sm-6">Action Date:</label>
-
-                             <?php
-                            $time = strtotime($valueAllHazards['action_date']);
-
-                            $yaer =  date('Y', $time);
-
-                             $month = date('m', $time);
-
-                            $day = date('d', $time);
-
-                            ?>
-
-                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionDate[]">
-                               <?php for ($i=1; $i < 32; $i++)
-                              {
-                                # code...
-                                  if($day == $i)
-                                  {
-                                    $dSelcted = 'selected="selected"';
-                                  }
-                                  else
-                                  {
-                                    $dSelcted = '';
-                                  }
-                                ?>
-                                  <option <?php echo $dSelcted;?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                              }
-                             ?>
-                            </select>
-
-                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionMonth[]">
-                              <?php for ($i=1; $i < 13; $i++)
-                              {
-                                # code...
-                                if($month == $i)
-                                  {
-                                    $mSelcted = 'selected="selected"';
-                                  }
-                                  else
-                                  {
-                                    $mSelcted = '';
-                                  }
-                                ?>
-                                  <option <?php echo $mSelcted;?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                              }
-                             ?>
-                            </select>
-
-
-                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionYear[]">
-                              <?php for ($i=2016; $i < 2025; $i++)
-                              { if($yaer == $i)
-                                  {
-                                    $ySelcted = 'selected="selected"';
-                                  }
-                                  else
-                                  {
-                                    $ySelcted = '';
-                                  }
-                                # code...
-                                ?>
-                                  <option <?php echo $ySelcted;?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php
-                              }
-                             ?>
-
-                            </select>
-
-
-
-
-                          </div>
-
-
 						            </div>
                         <div class="col-sm-6">
                           <?php
@@ -618,6 +540,80 @@ $cntval = 1;
                         <div class="row col-sm-12 form-row">
                           <button class="col-sm-2 btn btn-primary addActionMember" id="add_new_member">+Action Officer</button>
                           <button class="col-sm-2 col-sm-offset-1 btn btn-primary addOtherActionMember" id="add_new_other_member">Add Others</button>
+                          <div class="col-sm-1"></div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-6">Action Date:</label>
+
+                             <?php
+                            $time = strtotime($valueAllHazards['action_date']);
+
+                            $yaer =  date('Y', $time);
+
+                             $month = date('m', $time);
+
+                            $day = date('d', $time);
+
+                            ?>
+
+                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionDate[]">
+                               <?php for ($i=1; $i < 32; $i++)
+                              {
+                                # code...
+                                  if($day == $i)
+                                  {
+                                    $dSelcted = 'selected="selected"';
+                                  }
+                                  else
+                                  {
+                                    $dSelcted = '';
+                                  }
+                                ?>
+                                  <option <?php echo $dSelcted;?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php
+                              }
+                             ?>
+                            </select>
+
+                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionMonth[]">
+                              <?php for ($i=1; $i < 13; $i++)
+                              {
+                                # code...
+                                if($month == $i)
+                                  {
+                                    $mSelcted = 'selected="selected"';
+                                  }
+                                  else
+                                  {
+                                    $mSelcted = '';
+                                  }
+                                ?>
+                                  <option <?php echo $mSelcted;?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php
+                              }
+                             ?>
+                            </select>
+
+
+                            <select class="col-sm-2 btn btn-default" id="inputSaving" name="actionYear[]">
+                              <?php for ($i=2016; $i < 2025; $i++)
+                              { if($yaer == $i)
+                                  {
+                                    $ySelcted = 'selected="selected"';
+                                  }
+                                  else
+                                  {
+                                    $ySelcted = '';
+                                  }
+                                # code...
+                                ?>
+                                  <option <?php echo $ySelcted;?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php
+                              }
+                             ?>
+
+                            </select>
+
+                          </div>
                            <input type="hidden" name="hazardsActionOfficerCount[]" id="hazardsActionOfficerCount" value="<?php echo $numActionOfficer;?>" />
                         </div>
 
